@@ -214,7 +214,7 @@ This addresses our quantity of people question, but not our quality of people qu
 
 The tech company data showed that tech hubs in the city were located nearest Fulton Street station, Union Square, Herald Square, and Bryant Park.
 
-The income data showed that the wealthiest neighborhoods in NYC were the Upper East and West Sides, Chelsea, the Grammercy/Murray Hill area, so in the evenings we recommended hitting Union Square, Columbus Circle, 86th Street (on the 456), 72nd Street (on the 123), and West 4th Street in the Village.
+The income data showed that the wealthiest neighborhoods in NYC were the Upper East and West Sides, Chelsea, the Gramercy/Murray Hill area, so in the evenings we recommended hitting Union Square, Columbus Circle, 86th Street (on the 456), 72nd Street (on the 123), and West 4th Street in the Village.
 
 ---
 
