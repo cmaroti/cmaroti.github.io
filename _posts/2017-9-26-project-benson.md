@@ -1,9 +1,8 @@
 ---
 layout: post
-title: MTA Turnstile Analysis
+title: MTA Turnstile Data Analysis
 ---
 
-# MTA Turnstile Data Analysis
 ## Metis Week 1
 
 Our first project at Metis was to help a fictional client WomenTechWomenYes (WTWY) decide at which subway stations to place canvassers, with the trifold goal of increasing attendance for their summer gala, general awareness, and fundraising. To that end, we not only focused on the number of people reached, but the kinds of people and whether they might be interested in WTWY.
@@ -44,8 +43,18 @@ Here is a snapshot of our dataframe at this point, sorted by highest exits:
     .dataframe tbody tr th {
         vertical-align: top;
     }
+    table, th, td {
+        border: 1px solid black;
+    }
+table {
+        border-collapse: collapse;
+    }
+    .dataframe {
+        font-size: 8px;
+    }
+
 </style>
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
