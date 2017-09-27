@@ -50,7 +50,7 @@ table {
         border-collapse: collapse;
     }
     .dataframe {
-        font-size: 8px;
+        font-size: 10px;
     }
 
 </style>
