@@ -58,11 +58,11 @@ How I decided to deal with these issues:
 
 ### Step 4: Feature Selection
 
-My initial set of features were budget, opening weekend, genre (8 categories), distributor (9 categories, i.e., Disney/Buena Vista, Universal), MPAA rating (G, PG, PG-13, R), and month of release. I ran an OLS model using both `statsmodels` and `sklearn` with all of the features predicting total foreign gross and got a \\( R^2 )\\ of 0.80 on all of the data and a cross-validated \\( R^2 )\\ of 0.75. This told me that my model was probably not overfitting, which is not surprising given I only had two numerical variables. Still, I wanted to see if I could eliminate features and streamline my model. I tried eliminating different combinations of distributor, rating, and month, and found that if I took out all of them my adjusted \\( R^2 )\\ was 0.78 versus 0.80, so I decided to do that for my model.
+My initial set of features were budget, opening weekend, genre (8 categories), distributor (9 categories, i.e., Disney/Buena Vista, Universal), MPAA rating (G, PG, PG-13, R), and month of release. I ran an OLS model using both `statsmodels` and `sklearn` with all of the features predicting total foreign gross and got a $$R^2$$ of 0.80 on all of the data and a cross-validated $$R^2$$ of 0.75. This told me that my model was probably not overfitting, which is not surprising given I only had two numerical variables. Still, I wanted to see if I could eliminate features and streamline my model. I tried eliminating different combinations of distributor, rating, and month, and found that if I took out all of them my adjusted $$R^2$$ was 0.78 versus 0.80, so I decided to do that for my model.
 
 ### Step 5: The Model
 
-My final `sklearn` OLS model included only the features budget, opening weekend, and genre, and my cross-validated \\( R^2 )\\
+My final `sklearn` OLS model included only the features budget, opening weekend, and genre, and my cross-validated $$R^2$$
 was 0.77. I got the below coefficients as well:
 
 * Intercept: -$20 million
@@ -93,8 +93,11 @@ To answer my original question, what genres are more popular in certain countrie
 
 To get a sense of this, I ran my OLS model on each country in my dataset that had 400 or more movies reporting in that country. It ended up being 47 countries total. Then for each country I found its coefficient for comedy in the model, and created a choropleth map of the coefficients, where red means a negative effect and blue means a positive effect.
 
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~cmaroti/0.embed"></iframe>
 
 
-The mean $$R^2$$ for the countries' models was 0.51, so take this with a grain of salt, but I still think we can draw some interesting generalizations from the map.
+The mean $$R^2$$ for the countries' models was 0.51, so take this with a grain of salt, but I still think we can draw some interesting generalizations from the map. For one thing, Latin America is generally reddish, in addition to France and Spain. Perhaps American humor does not translate well from English to the Romance Languages. On the other hand, Australia and South Africa are bluer, and they are English speaking countries. But the U.K. is very negative, maybe because British people are known for a specific kind of humor! Again, I wouldn't read too much into the individual coefficients, but if I am a movie studio and I am planning to release a comedy, I would have some sense of which countries it will do better in versus others. This model and map could be extended for more genres as well!
 
-This model and map could be extended for more genres! 
+### Step 6: Final Thoughts
+
+I thought it was pretty neat that in 2 weeks (and only 3 weeks into our data science educations), we were able to complete a project from start to finish, from scraping data to generating useful insights! 
