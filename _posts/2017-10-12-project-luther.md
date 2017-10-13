@@ -58,4 +58,43 @@ How I decided to deal with these issues:
 
 ### Step 4: Feature Selection
 
-My initial set of features were budget, opening weekend, genre (8 categories), distributor (9 categories, i.e., Disney/Buena Vista, Universal), MPAA rating (G, PG, PG-13, R), and month of release. I ran an OLS model on all of the features and got a cross-validated \\( R^2 )\\  
+My initial set of features were budget, opening weekend, genre (8 categories), distributor (9 categories, i.e., Disney/Buena Vista, Universal), MPAA rating (G, PG, PG-13, R), and month of release. I ran an OLS model using both `statsmodels` and `sklearn` with all of the features predicting total foreign gross and got a \\( R^2 )\\ of 0.80 on all of the data and a cross-validated \\( R^2 )\\ of 0.75. This told me that my model was probably not overfitting, which is not surprising given I only had two numerical variables. Still, I wanted to see if I could eliminate features and streamline my model. I tried eliminating different combinations of distributor, rating, and month, and found that if I took out all of them my adjusted \\( R^2 )\\ was 0.78 versus 0.80, so I decided to do that for my model.
+
+### Step 5: The Model
+
+My final `sklearn` OLS model included only the features budget, opening weekend, and genre, and my cross-validated \\( R^2 )\\
+was 0.77. I got the below coefficients as well:
+
+* Intercept: -$20 million
+* Budget: 1.067
+* Opening weekend: 3.093
+* Comedy: -$16,414,922
+* Documentary:  -$16,281,281
+* Drama: -$5,895,403
+* Family: $37,196,306
+* Horror: $2,471,289
+* Other: $8,575,768
+* Thriller: -$10,026,560
+* Action-Adventure: $374,803
+
+So, basically to find a movie's total foreign gross, take its budget, add 3 times its opening weekend, and make a small tweak for genre!
+
+#### How did the model do?
+
+Plot of sorted residuals:
+
+![sorted-residuals]({{ site.baseurl }}/images/residuals.png)
+
+For the middle 500 movies, my model does pretty well, within ~$50 million of the actual foreign gross amount. However, on the ends, my model underpredicts some movies by as much as $480 million and overpredicts by as much $260 million! The 5 most underpredicted movies were Frozen, Ice Age: Continental Drift, Minions, Transformers: Age of Extinction, and Skyfall. I suppose it's hard to quantify the universal appeal of these family movies, and of course James Bond. Transformers is a bit surprising, though, given that my 5 most overpredicted movies were all action-adventure films: Oz The Great and Powerful, Man of Steel, Batman vs. Superman: Dawn of Justice, The Hunger Games, and Green Lantern. I think these movies had exceptionally high opening weekends.
+
+### But what about individual countries?
+
+To answer my original question, what genres are more popular in certain countries relative to other countries, I decided to focus on comedy. I was surprised that in the general model, comedy had a negative effect on total foreign gross. I figured most people would like comedy, but then again perhaps something about American comedy doesn't translate well to other languages and cultures.
+
+To get a sense of this, I ran my OLS model on each country in my dataset that had 400 or more movies reporting in that country. It ended up being 47 countries total. Then for each country I found its coefficient for comedy in the model, and created a choropleth map of the coefficients, where red means a negative effect and blue means a positive effect.
+
+
+
+The mean $$R^2$$ for the countries' models was 0.51, so take this with a grain of salt, but I still think we can draw some interesting generalizations from the map.
+
+This model and map could be extended for more genres! 
