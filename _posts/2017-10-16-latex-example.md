@@ -19,9 +19,22 @@ To add MathJax, go the the `\_layouts` folder of your repo, and find the `defaul
 <script type=“text/javascript" src=“http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
 ```
 
-Now you can type LaTeX pretty much normally, but with delimiters $$...$$ or \\\\(...\\\\) for inline math, and \\\\[...\\\\] for block math.
+Now you can type LaTeX pretty much normally, but with delimiters ``$$...$$`` or \\\\(...\\\\) for inline math, and \\\\[...\\\\] for block math.
 
 ### An example
-``$$\\frac{1}{1+\\sin(x)}$$`` in markdown becomes
+``$$\frac{1}{1+\sin(x)}$$`` in markdown becomes
 
 $$\frac{1}{1+\sin(x)}$$
+
+## LaTeX in GitHub Readmes
+
+Unfortunately, it is by design that you cannot use MathJax in GitHub readmes. So, we need a workaround. The best one I have found is to use websites like [codecogs](http://www.codecogs.com/latex/eqneditor.php) or [sciweavers](http://www.sciweavers.org/free-online-latex-equation-editor).
+
+Basically, you type the expressions you want into the websites, they generate an image of the math, and you can then download it and add it to your readme, or link to the image.
+
+
+## References
+* http://www.codecogs.com
+* http://www.sciweavers.org
+* https://www.r-bloggers.com/rendering-latex-math-equations-in-github-markdown/
+* https://jekyllrb.com/docs/extras/
