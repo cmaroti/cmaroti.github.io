@@ -3,8 +3,6 @@ layout: post
 title: Predicting Foreign Box Office for Movies
 ---
 
-## Metis Weeks 2-3
-
 For project #2 at Metis we were supposed to scrape data from the internet and use it to predict something with a linear regression model. I decided to try to predict a movie's total foreign box office, as well as what genres are more popular in certain other countries relative to others.
 
 ### Step 1: Adventures with Scrapy
@@ -100,4 +98,4 @@ The mean $$R^2$$ for the countries' models was 0.51, so take this with a grain o
 
 ### Step 6: Final Thoughts
 
-I thought it was pretty neat that in 2 weeks (and only 3 weeks into our data science educations), we were able to complete a project from start to finish, from scraping data to generating useful insights! 
+I thought it was pretty neat that in 2 weeks (and only 3 weeks into our data science educations), we were able to complete a project from start to finish, from scraping data to generating useful insights!

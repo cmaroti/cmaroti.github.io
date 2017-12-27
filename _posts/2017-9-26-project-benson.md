@@ -3,9 +3,7 @@ layout: post
 title: MTA Turnstile Data Analysis
 ---
 
-## Metis Week 1
-
-Our first project at Metis was to help a fictional client WomenTechWomenYes (WTWY) decide at which subway stations to place canvassers, with the trifold goal of increasing attendance for their summer gala, general awareness, and fundraising. To that end, we not only focused on the number of people reached, but the kinds of people and whether they might be interested in WTWY.
+Our first project at Metis was essentially an exercise in exploratory data analysis. Our assignment was to help a fictional client WomenTechWomenYes (WTWY) decide at which subway stations to place canvassers, with the trifold goal of increasing attendance for their summer gala, general awareness, and fundraising. To that end, we not only focused on the number of people reached, but the kinds of people and whether they might be interested in WTWY.
 
 This was a good first project to introduce us to the world of data science because the [MTA turnstile data](http://web.mta.info/developers/turnstile.html) that we were supposed to use required a lot of cleaning.
 
