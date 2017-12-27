@@ -19,9 +19,9 @@ To add MathJax, go the the `\_layouts` folder of your repo, and find the `defaul
 <script type=“text/javascript" src=“http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
 ```
 
-Now you can type LaTeX pretty much normally, but with delimiters \$\$...\$\$ or \\\\(...\\\\) for inline math, and \\\\[...\\\\] for block math.
+Now you can type LaTeX pretty much normally, but with delimiters $$...$$ or \\\\(...\\\\) for inline math, and \\\\[...\\\\] for block math.
 
 ### An example
-\$\$\\frac{1}{1+\\sin(x)}\$\$ in markdown becomes
+$$\\frac{1}{1+\\sin(x)}$$ in markdown becomes
 
 $$\frac{1}{1+\sin(x)}$$
