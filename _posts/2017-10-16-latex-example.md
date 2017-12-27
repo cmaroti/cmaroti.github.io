@@ -34,7 +34,7 @@ Basically, you type the expressions you want into the websites, they generate an
 
 
 ## References
-* http://www.codecogs.com
-* http://www.sciweavers.org
-* https://www.r-bloggers.com/rendering-latex-math-equations-in-github-markdown/
-* https://jekyllrb.com/docs/extras/
+* [http://www.codecogs.com]()
+* [http://www.sciweavers.org]()
+* [https://www.r-bloggers.com/rendering-latex-math-equations-in-github-markdown/]()
+* [https://jekyllrb.com/docs/extras/]()
