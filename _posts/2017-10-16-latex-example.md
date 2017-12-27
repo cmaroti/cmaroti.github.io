@@ -22,6 +22,6 @@ To add MathJax, go the the `\_layouts` folder of your repo, and find the `defaul
 Now you can type LaTeX pretty much normally, but with delimiters $$...$$ or \\\\(...\\\\) for inline math, and \\\\[...\\\\] for block math.
 
 ### An example
-$$\\frac{1}{1+\\sin(x)}$$ in markdown becomes
+``$$\\frac{1}{1+\\sin(x)}$$`` in markdown becomes
 
 $$\frac{1}{1+\sin(x)}$$
